@@ -1,0 +1,41 @@
+SEARCH_1_BOTH_DIRECTIONS = [
+    # 1. Repurposing or repositioning stated outright
+    '("drug repurposing"[Title/Abstract] OR "drug repositioning"[Title/Abstract] OR "repurposed drug"[Title/Abstract] OR "existing drug"[Title/Abstract] OR "approved drug"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "dementia"[Title/Abstract])',
+
+    # 2. Cardiometabolic drug classes vs AD (the richest repurposing seam)
+    '("metformin"[Title/Abstract] OR "statin"[Title/Abstract] OR "simvastatin"[Title/Abstract] OR "atorvastatin"[Title/Abstract] OR "pioglitazone"[Title/Abstract] OR "GLP-1"[Title/Abstract] OR "liraglutide"[Title/Abstract] OR "semaglutide"[Title/Abstract] OR "empagliflozin"[Title/Abstract] OR "SGLT2"[Title/Abstract] OR "antihypertensive"[Title/Abstract] OR "candesartan"[Title/Abstract] OR "nilvadipine"[Title/Abstract] OR "telmisartan"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "dementia"[Title/Abstract] OR "cognitive decline"[Title/Abstract] OR "amyloid"[Title/Abstract] OR "tau"[Title/Abstract])',
+
+    # 3. Anti-inflammatory, immunomodulatory and anti-infective reuse
+    '("NSAID"[Title/Abstract] OR "ibuprofen"[Title/Abstract] OR "indomethacin"[Title/Abstract] OR "etanercept"[Title/Abstract] OR "TNF inhibitor"[Title/Abstract] OR "hydroxychloroquine"[Title/Abstract] OR "minocycline"[Title/Abstract] OR "rapamycin"[Title/Abstract] OR "sirolimus"[Title/Abstract] OR "valacyclovir"[Title/Abstract] OR "antiviral"[Title/Abstract] OR "doxycycline"[Title/Abstract] OR "rifampicin"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "dementia"[Title/Abstract] OR "neuroinflammation"[Title/Abstract] OR "amyloid"[Title/Abstract])',
+
+    # 4. CNS, oncology and miscellaneous reuse
+    '("lithium"[Title/Abstract] OR "bumetanide"[Title/Abstract] OR "riluzole"[Title/Abstract] OR "dasatinib"[Title/Abstract] OR "nilotinib"[Title/Abstract] OR "bexarotene"[Title/Abstract] OR "sildenafil"[Title/Abstract] OR "levetiracetam"[Title/Abstract] OR "fasudil"[Title/Abstract] OR "montelukast"[Title/Abstract] OR "cilostazol"[Title/Abstract] OR "deferiprone"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "dementia"[Title/Abstract] OR "cognition"[Title/Abstract] OR "amyloid"[Title/Abstract] OR "tau"[Title/Abstract])',
+
+    # 5. HARMFUL direction: drug classes tied to worse cognition or incident dementia
+    '("anticholinergic"[Title/Abstract] OR "benzodiazepine"[Title/Abstract] OR "proton pump inhibitor"[Title/Abstract] OR "opioid"[Title/Abstract] OR "antipsychotic"[Title/Abstract] OR "zolpidem"[Title/Abstract] OR "polypharmacy"[Title/Abstract]) AND ("dementia risk"[Title/Abstract] OR "incident dementia"[Title/Abstract] OR "cognitive decline"[Title/Abstract] OR "Alzheimer"[Title/Abstract])',
+
+    # 6. Pharmacoepidemiology phrasing (prescription cohorts, target trial emulation)
+    '("incident dementia"[Title/Abstract] OR "dementia risk"[Title/Abstract] OR "risk of Alzheimer"[Title/Abstract]) AND ("cohort"[Title/Abstract] OR "prescription"[Title/Abstract] OR "claims"[Title/Abstract] OR "electronic health record"[Title/Abstract] OR "propensity"[Title/Abstract] OR "target trial"[Title/Abstract] OR "Mendelian randomization"[Title/Abstract])',
+
+]
+
+SEARCH_2_POSITIVE_FOCUSED = [
+    # 1. Explicit repurposing language
+    '("drug repurposing"[Title/Abstract] OR "drug repositioning"[Title/Abstract] OR "repurposed"[Title/Abstract] OR "repositioned"[Title/Abstract] OR "approved drug"[Title/Abstract] OR "existing drug"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "dementia"[Title/Abstract])',
+
+    # 2. Benefit verbs crossed with AD pathology
+    '("ameliorat*"[Title/Abstract] OR "attenuat*"[Title/Abstract] OR "rescue*"[Title/Abstract] OR "improved cognition"[Title/Abstract] OR "improves cognition"[Title/Abstract] OR "slowed decline"[Title/Abstract] OR "neuroprotective"[Title/Abstract] OR "reduced amyloid"[Title/Abstract] OR "reduced tau"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract]) AND ("drug"[Title/Abstract] OR "treatment"[Title/Abstract] OR "therapy"[Title/Abstract])',
+
+    # 3. Cardiometabolic reuse
+    '("metformin"[Title/Abstract] OR "pioglitazone"[Title/Abstract] OR "statin"[Title/Abstract] OR "GLP-1"[Title/Abstract] OR "semaglutide"[Title/Abstract] OR "liraglutide"[Title/Abstract] OR "empagliflozin"[Title/Abstract] OR "SGLT2"[Title/Abstract] OR "telmisartan"[Title/Abstract] OR "candesartan"[Title/Abstract] OR "intranasal insulin"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract] OR "cognitive decline"[Title/Abstract])',
+
+    # 4. Anti-inflammatory, anti-infective, immunomodulatory reuse
+    '("minocycline"[Title/Abstract] OR "rapamycin"[Title/Abstract] OR "sirolimus"[Title/Abstract] OR "etanercept"[Title/Abstract] OR "hydroxychloroquine"[Title/Abstract] OR "valacyclovir"[Title/Abstract] OR "rifampicin"[Title/Abstract] OR "doxycycline"[Title/Abstract] OR "montelukast"[Title/Abstract] OR "NSAID"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract])',
+
+    # 5. CNS and oncology reuse
+    '("nilotinib"[Title/Abstract] OR "dasatinib"[Title/Abstract] OR "bexarotene"[Title/Abstract] OR "lithium"[Title/Abstract] OR "levetiracetam"[Title/Abstract] OR "riluzole"[Title/Abstract] OR "sildenafil"[Title/Abstract] OR "cilostazol"[Title/Abstract] OR "fasudil"[Title/Abstract] OR "bumetanide"[Title/Abstract] OR "prazosin"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract])',
+
+    # 6. Computational repurposing screens
+    '("in silico"[Title/Abstract] OR "molecular docking"[Title/Abstract] OR "network pharmacology"[Title/Abstract] OR "transcriptomic signature"[Title/Abstract] OR "signature reversion"[Title/Abstract] OR "machine learning"[Title/Abstract]) AND ("drug repurposing"[Title/Abstract] OR "drug repositioning"[Title/Abstract]) AND ("Alzheimer"[Title/Abstract])',
+
+]
